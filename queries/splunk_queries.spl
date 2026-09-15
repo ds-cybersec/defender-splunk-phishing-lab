@@ -1,5 +1,6 @@
 Scenario 1: Baseline Successful Authentication
 index=main sourcetype=_json operation="UserLoggedIn"
+| eval Workload=coalesce(Workload, App, Service, "AzureActiveDirectory")
 | table _time ClientIP UserKey resultStatus Workload
 
 Scenario 2: Failed Login / Phishing Simulation
