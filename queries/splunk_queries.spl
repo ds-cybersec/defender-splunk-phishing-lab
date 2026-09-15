@@ -1,15 +1,15 @@
-# Scenario 1: Baseline Successful Authentication
+Scenario 1: Baseline Successful Authentication
 index=main sourcetype=_json operation="UserLoggedIn"
 | table _time ClientIP UserKey resultStatus Workload
 
-# Scenario 2: Failed Login / Phishing Simulation
+Scenario 2: Failed Login / Phishing Simulation
 index=main sourcetype=_json operation="UserLoginFailed"
 | table _time ClientIP SenderAddress Subject resultStatus
 
-# Scenario 3: Email Spoofing & DMARC Failure (EOP)
+Scenario 3: Email Spoofing & DMARC Failure (EOP)
 index=main sourcetype=_json operation="MessageBlocked"
 | table _time SenderAddress RecipientAddress ThreatDetection DeliveryAction
 
-# Scenario 4: DLP Policy Violation (Purview)
+Scenario 4: DLP Policy Violation (Purview)
 index=main sourcetype=_json operation="DlpRuleMatch"
 | table _time SenderAddress RecipientAddress PolicyName ActionTaken
