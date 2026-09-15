@@ -1,0 +1,52 @@
+{
+  "creationTime": "2026-09-11T01:00:00",
+  "id": "guid-sample-12345",
+  "operation": "UserLoggedIn",
+  "organizationId": "Jennywithjohnfreegmail.onmicrosoft.com",
+  "recordType": 15,
+  "resultStatus": "Succeeded",
+  "userKey": "deepthi@Jennywithjohnfreegmail.onmicrosoft.com",
+  "userType": 0,
+  "version": 1,
+  "workload": "AzureActiveDirectory",
+  "ClientIP": "192.168.1.50",
+  "UserId": "deepthi@Jennywithjohnfreegmail.onmicrosoft.com"
+}
+{
+  "creationTime": "2026-09-11T02:15:00",
+  "id": "guid-phish-99887",
+  "operation": "UserLoginFailed",
+  "organizationId": "Jennywithjohnfreegmail.onmicrosoft.com",
+  "resultStatus": "Failed",
+  "SenderAddress": "spoofed-support@external-phishing-domain.com",
+  "RecipientAddress": "deepthi@Jennywithjohnfreegmail.onmicrosoft.com",
+  "Subject": "Urgent: Verify Your Corporate Password Immediately",
+  "AuthenticationResults": "spf=fail dkim=fail dmarc=fail",
+  "ClientIP": "185.220.101.5",
+  "Workload": "AzureActiveDirectory"
+}
+{
+  "creationTime": "2026-09-11T03:30:00",
+  "id": "guid-spoof-44556",
+  "operation": "MessageBlocked",
+  "organizationId": "Jennywithjohnfreegmail.onmicrosoft.com",
+  "SenderAddress": "admin@hr-corporate-secured.com",
+  "RecipientAddress": "deepthi@Jennywithjohnfreegmail.onmicrosoft.com",
+  "Subject": "Mandatory Payroll Update",
+  "AuthenticationResults": "spf=fail dkim=pass dmarc=fail",
+  "ClientIP": "203.0.113.88",
+  "DeliveryAction": "Quarantined",
+  "ThreatDetection": "Spoof"
+}
+{
+  "creationTime": "2026-09-11T04:45:00",
+  "id": "guid-dlp-11223",
+  "operation": "DlpRuleMatch",
+  "organizationId": "Jennywithjohnfreegmail.onmicrosoft.com",
+  "SenderAddress": "deepthi@Jennywithjohnfreegmail.onmicrosoft.com",
+  "RecipientAddress": "personal-email@external.com",
+  "Subject": "Q3 Financial Projections",
+  "DlpPolicyName": "Financial Data Protection Policy",
+  "ActionTaken": "BlockedAndNotified",
+  "Workload": "Exchange"
+}
