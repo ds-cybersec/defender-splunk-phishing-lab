@@ -12,4 +12,5 @@ index=main sourcetype=_json operation="MessageBlocked"
 
 Scenario 4: DLP Policy Violation (Purview)
 index=main sourcetype=_json operation="DlpRuleMatch"
+| eval PolicyName=coalesce(PolicyName, "Default Financial DLP Policy")
 | table _time SenderAddress RecipientAddress PolicyName ActionTaken
