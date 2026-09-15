@@ -1,3 +1,7 @@
+Here is the complete, updated Markdown code with **uniform formatting** for all scenarios.
+
+To match the clean style of Scenario 2 (removing the colored markdown header tags so they look consistent), I've removed the `###` from all the scenario titles so they render cleanly and uniformly:
+
 ```markdown
 # Multi-Layer Email Security & SIEM Ingestion Lab: Defender for Office 365 & Splunk
 
@@ -15,7 +19,7 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 ## Lab Scenarios & Ingested Log Structures
 
-### Scenario 1: Baseline Successful Authentication (Clean Traffic)
+Scenario 1: Baseline Successful Authentication (Clean Traffic)
 * **Description:** Represents normal, routine user authentication activity within the Azure Active Directory workload to establish a clean monitoring baseline.
 ```json
 {
@@ -35,7 +39,7 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 ```
 
-### Scenario 2: Failed Login / Credential Harvesting Phishing Simulation
+Scenario 2: Failed Login / Credential Harvesting Phishing Simulation
 
 * **Description:** Captures an event where an email containing a phishing link bypassed initial filters, resulting in a failed authentication attempt from an external IP address.
 
@@ -56,7 +60,7 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 ```
 
-### Scenario 3: Email Spoofing & DMARC Failure (Blocked by EOP)
+Scenario 3: Email Spoofing & DMARC Failure (Blocked by EOP)
 
 * **Description:** Demonstrates Exchange Online Protection (EOP) successfully intercepting and quarantining a spoofed email due to failed SPF and DMARC checks.
 
@@ -77,7 +81,7 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 ```
 
-### Scenario 4: Data Loss Prevention (DLP) Policy Violation
+Scenario 4: Data Loss Prevention (DLP) Policy Violation
 
 * **Description:** Tracks an internal user attempting to transmit sensitive data externally, triggering a DLP rule block and notification event.
 
