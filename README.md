@@ -1,4 +1,4 @@
-markdown
+
 # Multi-Layer Email Security & SIEM Ingestion Lab: Defender for Office 365 & Splunk
 
 ## Executive Summary
