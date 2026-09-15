@@ -1,6 +1,4 @@
-Here is the complete, clean Markdown code for your entire lab document. I have fixed the spacing on **Scenario 1** so it renders properly (hiding the literal text ````json` just like the other scenarios) and ensured all scenarios look completely clean and uniform:
-
-```markdown
+markdown
 # Multi-Layer Email Security & SIEM Ingestion Lab: Defender for Office 365 & Splunk
 
 ## Executive Summary
@@ -19,7 +17,7 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 Scenario 1: Baseline Successful Authentication (Clean Traffic)
 
-* **Description:** Represents normal, routine user authentication activity within the Azure Active Directory workload to establish a clean monitoring baseline.
+- Description: Represents normal, routine user authentication activity within the Azure Active Directory workload to establish a clean monitoring baseline.
 
 ```json
 {
@@ -36,11 +34,12 @@ Scenario 1: Baseline Successful Authentication (Clean Traffic)
   "ClientIP": "192.168.1.50",
   "UserId": "user@yourdomain.onmicrosoft.com"
 }
+
 ```
 
 Scenario 2: Failed Login / Credential Harvesting Phishing Simulation
 
-* **Description:** Captures an event where an email containing a phishing link bypassed initial filters, resulting in a failed authentication attempt from an external IP address.
+* Description: Captures an event where an email containing a phishing link bypassed initial filters, resulting in a failed authentication attempt from an external IP address.
 
 ```json
 {
@@ -61,7 +60,7 @@ Scenario 2: Failed Login / Credential Harvesting Phishing Simulation
 
 Scenario 3: Email Spoofing & DMARC Failure (Blocked by EOP)
 
-* **Description:** Demonstrates Exchange Online Protection (EOP) successfully intercepting and quarantining a spoofed email due to failed SPF and DMARC checks.
+* Description: Demonstrates Exchange Online Protection (EOP) successfully intercepting and quarantining a spoofed email due to failed SPF and DMARC checks.
 
 ```json
 {
@@ -82,7 +81,7 @@ Scenario 3: Email Spoofing & DMARC Failure (Blocked by EOP)
 
 Scenario 4: Data Loss Prevention (DLP) Policy Violation
 
-* **Description:** Tracks an internal user attempting to transmit sensitive data externally, triggering a DLP rule block and notification event.
+* Description: Tracks an internal user attempting to transmit sensitive data externally, triggering a DLP rule block and notification event.
 
 ```json
 {
