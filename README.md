@@ -1,6 +1,4 @@
-Here is the complete, updated Markdown code with **uniform formatting** for all scenarios.
-
-To match the clean style of Scenario 2 (removing the colored markdown header tags so they look consistent), I've removed the `###` from all the scenario titles so they render cleanly and uniformly:
+Here is the complete, clean Markdown code for your entire lab document. I have fixed the spacing on **Scenario 1** so it renders properly (hiding the literal text ````json` just like the other scenarios) and ensured all scenarios look completely clean and uniform:
 
 ```markdown
 # Multi-Layer Email Security & SIEM Ingestion Lab: Defender for Office 365 & Splunk
@@ -20,7 +18,9 @@ This project demonstrates the architecture and implementation of an enterprise-g
 ## Lab Scenarios & Ingested Log Structures
 
 Scenario 1: Baseline Successful Authentication (Clean Traffic)
+
 * **Description:** Represents normal, routine user authentication activity within the Azure Active Directory workload to establish a clean monitoring baseline.
+
 ```json
 {
   "creationTime": "2026-09-11T01:00:00",
@@ -36,7 +36,6 @@ Scenario 1: Baseline Successful Authentication (Clean Traffic)
   "ClientIP": "192.168.1.50",
   "UserId": "user@yourdomain.onmicrosoft.com"
 }
-
 ```
 
 Scenario 2: Failed Login / Credential Harvesting Phishing Simulation
