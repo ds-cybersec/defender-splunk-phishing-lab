@@ -1,19 +1,15 @@
-# ==========================================
-# MULTI-LAYER EMAIL SECURITY & SIEM LAB SPL
-# ==========================================
-
-# Scenario 1: Baseline Successful Authentication (Entra ID)
+# Scenario 1: Baseline Successful Authentication
 index=main sourcetype=_json operation="UserLoggedIn"
 | table _time ClientIP UserKey resultStatus Workload
 
-# Scenario 2: Failed Login / Credential Harvesting Phishing Simulation (Entra ID)
+# Scenario 2: Failed Login / Phishing Simulation
 index=main sourcetype=_json operation="UserLoginFailed"
 | table _time ClientIP SenderAddress Subject resultStatus
 
-# Scenario 3: Email Spoofing & DMARC Failure - Blocked by EOP
+# Scenario 3: Email Spoofing & DMARC Failure (EOP)
 index=main sourcetype=_json operation="MessageBlocked"
 | table _time SenderAddress RecipientAddress ThreatDetection DeliveryAction
 
-# Scenario 4: Data Loss Prevention (DLP) Policy Violation (Purview)
+# Scenario 4: DLP Policy Violation (Purview)
 index=main sourcetype=_json operation="DlpRuleMatch"
 | table _time SenderAddress RecipientAddress PolicyName ActionTaken
