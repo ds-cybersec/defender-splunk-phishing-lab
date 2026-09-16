@@ -13,6 +13,8 @@ This project demonstrates the architecture and implementation of an enterprise-g
 
 ---
 
+![SOC Dashboard](artifacts/Dashboard%201.png)
+
 ## Lab Scenarios & Ingested Log Structures
 
 Scenario 1: Baseline Successful Authentication (Clean Traffic)
